@@ -1,0 +1,6 @@
+@media (min-width: 992px) {
+    .App .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: 2.5rem;
+        padding-left: 2.5rem;
+    }
+}

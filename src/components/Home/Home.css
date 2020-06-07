@@ -1,0 +1,59 @@
+.on-image {
+    position: absolute;
+}
+
+@media (min-width: 992px) {
+    .on-image {
+        margin-left: 25px !important;
+    }
+}
+
+.name {
+    text-align: left;
+    color: #e4dacd;
+    font-size: 55px;
+    line-height: 1.1;
+}
+
+.lawyer {
+    text-align: left;
+    color: #e4dacd;
+    line-height: 1.1;
+}
+
+.lawyer-background {
+    background-color: #a5948e;
+}
+
+@media (min-width: 375px) {
+    .big-image {
+        max-width: 450%;
+    }
+}
+
+@media (min-width: 992px) {
+    .big-image {
+        max-width: 140%;
+    }
+}
+
+@media (min-width: 1280px) {
+    .big-image {
+        max-width: 125%;
+    }
+}
+
+@media (min-width: 1400px) {
+    .big-image {
+        max-width: 100%;
+    }
+}
+
+.info {
+    margin-top: 45px;
+}
+
+.text {
+    text-align: left;
+    font-size: 22px;
+}

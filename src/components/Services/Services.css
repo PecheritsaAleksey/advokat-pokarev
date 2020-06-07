@@ -1,0 +1,9 @@
+.service{
+    min-width: 100%;
+}
+
+@media (min-width: 1800px) {
+    .big-image {
+        width: -webkit-fill-available;
+    }
+}
