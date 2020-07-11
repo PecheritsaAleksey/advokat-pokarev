@@ -25,28 +25,10 @@
     background-color: #a5948e;
 }
 
-@media (min-width: 375px) {
-    .big-image {
-        max-width: 450%;
-    }
-}
-
-@media (min-width: 992px) {
-    .big-image {
-        max-width: 140%;
-    }
-}
-
-@media (min-width: 1280px) {
-    .big-image {
-        max-width: 125%;
-    }
-}
-
-@media (min-width: 1400px) {
-    .big-image {
-        max-width: 100%;
-    }
+.big-image {
+    max-width: 100%;
+    object-fit: cover;
+    height: 390px;
 }
 
 .info {
