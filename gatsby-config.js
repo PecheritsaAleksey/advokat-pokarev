@@ -5,6 +5,7 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: `Адвокат Покарев`,
+    siteUrl: `https://gettouch.site/`,
   },
   plugins: [
     "gatsby-plugin-sass",
