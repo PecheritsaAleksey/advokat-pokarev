@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Roboto:wght@300;700&display=swap");
+
+:root {
+  --layout-paddind-horizontal: 150px;
+  --layout-paddind-vertical: 30px;
+  --item-paddind-horizontal: 20px;
+  --item-paddind-vertical: 30px;
+  --header-text-color: #444444;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #dbdbdb;
+  font-family: "Roboto", sans-serif;
+}
+
+main {
+  padding: var(--layout-paddind-vertical) var(--layout-paddind-horizontal);
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+/* LAYOUT */
+
+.global-header {
+  padding: var(--layout-paddind-vertical) var(--layout-paddind-horizontal);
+  background-color: #fff;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.global-header a {
+  text-transform: uppercase;
+}
+
+.main-heading a {
+  color: var(--header-text-color);
+  text-decoration: none;
+  font-weight: 300;
+}
+
+li {
+  display: table-cell;
+  position: relative;
+  padding: 15px 0;
+}
+
+.navigation ul {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.navigation li {
+  list-style: none;
+  padding: 0 16px;
+}
+
+.navigation a {
+  text-decoration: none;
+  font-size: 14px;
+  padding: 7px 10px;
+  position: relative;
+}
+
+.navigation a:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 1px;
+  left: 50%;
+  position: absolute;
+  background: var(--header-text-color);
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.navigation a:hover:after,
+.navigation .active:after {
+  width: 100%;
+  left: 0;
+}
+
+/* MAIN PAGE */
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+
+  animation-name: open-page;
+  animation-duration: 0.9s;
+}
+
+@keyframes open-page {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.main-item {
+  padding: var(--item-paddind-horizontal) 0;
+  display: flex;
+  flex-basis: 50%;
+  justify-content: center;
+}
+
+.main-item h1 {
+  font-size: 55px;
+  font-weight: 700;
+}
+
+.main-item h3 {
+  font-size: 25px;
+  font-weight: 300;
+}
+
+.main-item p {
+  font-size: 20px;
+  line-height: 35px;
+}
+
+.main-item img {
+  max-width: 500px !important;
+  object-fit: contain;
+}
