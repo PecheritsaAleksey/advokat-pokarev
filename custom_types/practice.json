@@ -1,0 +1,25 @@
+{
+  "Main": {
+    "name": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading1,heading2,heading3,heading4,heading5,heading6",
+        "label": "name"
+      }
+    },
+    "result": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading1,heading2,heading3,heading4,heading5,heading6",
+        "label": "result"
+      }
+    },
+    "link": {
+      "type": "Link",
+      "config": {
+        "label": "link",
+        "select": null
+      }
+    }
+  }
+}

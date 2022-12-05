@@ -18,12 +18,12 @@ const Layout = ({ pathname, children }) => {
               </Link>
             </li>
             <li>
-              <Link to="/" className={pathname === "/about" && "active"}>
+              <Link to="/about" className={pathname === "/about" && "active"}>
                 Обо мне
               </Link>
             </li>
             <li>
-              <Link to="/" className={pathname === "/practice" && "active"}>
+              <Link to="/practice" className={pathname === "/practice" && "active"}>
                 Практика
               </Link>
             </li>
@@ -47,9 +47,10 @@ const Layout = ({ pathname, children }) => {
       </header>
       <main>{children}</main>
       <footer>
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.com">Gatsby</a>
+        <p>
+          © {new Date().getFullYear()},{` `}
+          Адвокат Алексей Васильевич Покарев
+        </p>
       </footer>
     </div>
   );

@@ -3,6 +3,8 @@
 :root {
   --layout-paddind-horizontal: 150px;
   --layout-paddind-vertical: 30px;
+  --layout-paddind-horizontal-min: 30px;
+  --layout-paddind-vertical-min: 10px;
   --item-paddind-horizontal: 20px;
   --item-paddind-vertical: 30px;
   --header-text-color: #444444;
@@ -20,6 +22,7 @@ body {
 
 main {
   padding: var(--layout-paddind-vertical) var(--layout-paddind-horizontal);
+  flex: 1;
 }
 
 .flex-column {
@@ -27,6 +30,13 @@ main {
 }
 
 /* LAYOUT */
+
+.global-wrapper {
+  display: flex;
+  min-height: 100vh;
+  max-height: 100vh;
+  flex-direction: column;
+}
 
 .global-header {
   padding: var(--layout-paddind-vertical) var(--layout-paddind-horizontal);
@@ -89,6 +99,14 @@ li {
   left: 0;
 }
 
+footer {
+  padding: 0 var(--layout-paddind-horizontal);
+  background-color: #fff;
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+}
+
 /* MAIN PAGE */
 
 .container {
@@ -135,4 +153,44 @@ li {
 .main-item img {
   max-width: 500px !important;
   object-fit: contain;
+}
+
+/* PRACTICE */
+
+.practice-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 35px 0;
+}
+
+.practice-item h2,
+.practice-item h3,
+.practice-item a {
+  text-transform: uppercase;
+}
+
+.practice-item h3,
+.practice-item a {
+  color: var(--header-text-color);
+  text-decoration: none;
+  margin: 15px 0;
+}
+
+@media (max-width: 1300px) {
+  .navigation {
+    display: none;
+  }
+
+  main {
+    padding: var(--layout-paddind-vertical-min) var(--layout-paddind-horizontal-min);
+  }
+
+  .main-item {
+    flex-basis: 100%;
+  }
+
+  footer {
+    padding: 0 var(--layout-paddind-horizontal-min);
+  }
 }

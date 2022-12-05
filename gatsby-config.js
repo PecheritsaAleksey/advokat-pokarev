@@ -34,6 +34,10 @@ module.exports = {
         accessToken: process.env.PRISMIC_ACCESS_TOKEN,
         schemas: {
           main: require("./custom_types/main.json"),
+          about: require("./custom_types/about.json"),
+          practice: require("./custom_types/practice.json"),
+          service: require("./custom_types/service.json"),
+          contact: require("./custom_types/contact.json"),
         },
       },
     },

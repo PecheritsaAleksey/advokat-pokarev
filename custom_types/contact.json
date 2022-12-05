@@ -1,0 +1,25 @@
+{
+  "Main": {
+    "phone": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading1,heading2,heading3,heading4,heading5,heading6",
+        "label": "phone"
+      }
+    },
+    "email": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading1,heading2,heading3,heading4,heading5,heading6",
+        "label": "email"
+      }
+    },
+    "address": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading1,heading2,heading3,heading4,heading5,heading6",
+        "label": "address"
+      }
+    }
+  }
+}
