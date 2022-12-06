@@ -23,22 +23,31 @@ const Layout = ({ pathname, children }) => {
               </Link>
             </li>
             <li>
-              <Link to="/practice" className={pathname === "/practice" && "active"}>
+              <Link
+                to="/practice"
+                className={pathname === "/practice" && "active"}
+              >
                 Практика
               </Link>
             </li>
             <li>
-              <Link to="/" className={pathname === "/services" && "active"}>
+              <Link
+                to="/service"
+                className={pathname === "/service" && "active"}
+              >
                 Услуги
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link to="/" className={pathname === "/feedbacks" && "active"}>
                 Отзывы
               </Link>
-            </li>
+            </li> */}
             <li>
-              <Link to="/" className={pathname === "/contacts" && "active"}>
+              <Link
+                to="/contacts"
+                className={pathname === "/contacts" && "active"}
+              >
                 Контакты
               </Link>
             </li>

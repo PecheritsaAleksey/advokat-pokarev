@@ -1,5 +1,13 @@
 {
   "Main": {
+    "layout": {
+      "type": "Image",
+      "config": {
+        "constraint": {},
+        "thumbnails": [],
+        "label": "layout"
+      }
+    },
     "services": {
       "type": "StructuredText",
       "config": {
