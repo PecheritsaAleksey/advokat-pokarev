@@ -7,11 +7,17 @@ const Layout = ({ pathname, children }) => {
   return (
     <div className="global-wrapper">
       <header className="global-header">
+        <input className="checkbox" type="checkbox" name="" id="" />
+        <div className="hamburger-lines">
+          <span class="line line1"></span>
+          <span class="line line2"></span>
+          <span class="line line3"></span>
+        </div>
         <h1 className="main-heading">
           <Link to="/">Адвокат Покарев</Link>
         </h1>
         <nav className="navigation">
-          <ul>
+          <ul className="menu-items">
             <li>
               <Link to="/" className={pathname === "/" && "active"}>
                 Главная

@@ -46,6 +46,10 @@ main {
   justify-content: space-between;
 }
 
+.global-header input {
+  display: none;
+}
+
 .global-header a {
   text-transform: uppercase;
 }
@@ -61,7 +65,7 @@ main {
   font-weight: 300;
 }
 
-.nav-menu{
+.nav-menu {
   display: none;
 }
 
@@ -240,6 +244,11 @@ footer {
       var(--layout-paddind-horizontal-min);
   }
 
+  .global-header {
+    padding: var(--layout-paddind-vertical-min)
+      var(--layout-paddind-horizontal-min);
+  }
+
   .main-item {
     flex-basis: 100%;
   }
@@ -256,5 +265,92 @@ footer {
 
   .service-layout img {
     height: 150px !important;
+  }
+
+  .global-header .checkbox {
+    position: absolute;
+    display: block;
+    height: 32px;
+    width: 32px;
+    top: 25px;
+    right: 25px;
+    z-index: 5;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .global-header .hamburger-lines {
+    display: block;
+    height: 26px;
+    width: 32px;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .global-header .hamburger-lines .line {
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    background: #0e2431;
+  }
+
+  .global-header .hamburger-lines .line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .global-header .hamburger-lines .line2 {
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .global-header .hamburger-lines .line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .global-header li {
+    margin-bottom: 1.2rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  .global-header input[type="checkbox"]:checked ~ .navigation .menu-items {
+    padding-top: 120px;
+    box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.5);
+    height: 100vh;
+    width: 100%;
+    transform: translate(150%);
+    display: flex;
+    flex-direction: column;
+    margin-left: -40px;
+    padding-left: 50px;
+    transition: transform 0.5s ease-in-out;
+    text-align: center;
+  }
+
+  .global-header input[type="checkbox"]:checked ~ .navigation {
+    transform: translateX(-130px);
+  }
+
+  .global-header input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+    transform: rotate(45deg);
+  }
+
+  .global-header input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+    transform: scaleY(0);
+  }
+
+  .global-header input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+    transform: rotate(-45deg);
+  }
+
+  .global-header input[type="checkbox"]:checked ~ .main-heading {
+    display: none;
   }
 }
