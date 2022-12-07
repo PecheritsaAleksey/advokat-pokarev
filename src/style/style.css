@@ -182,6 +182,7 @@ footer {
 .practice-item h3,
 .practice-item a {
   text-transform: uppercase;
+  text-align: center;
 }
 
 .practice-item h3,
