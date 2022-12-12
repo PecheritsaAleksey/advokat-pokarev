@@ -20,6 +20,14 @@
         "label": "link",
         "select": null
       }
+    },
+    "type": {
+      "type": "Select",
+      "config": {
+        "options": ["arbitration", "civil", "criminal"],
+        "default_value": "arbitration",
+        "label": "type"
+      }
     }
   }
 }

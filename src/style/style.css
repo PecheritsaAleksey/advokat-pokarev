@@ -192,6 +192,35 @@ footer {
   margin: 15px 0;
 }
 
+.practice-type-select {
+  display: flex;
+  margin: calc(var(--layout-paddind-vertical) * -1)
+    calc(var(--layout-paddind-horizontal) * -1) 0
+    calc(var(--layout-paddind-horizontal) * -1);
+  justify-content: space-around;
+  background-color: #fff;
+}
+
+.practice-type-select button {
+  width: 100%;
+  height: 60px;
+  color: var(--header-text-color);
+  border: none;
+  background-color: #fff;
+  font-size: larger;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.practice-type-select button:hover {
+  background-color: var(--header-text-color);
+  color: #fff;
+}
+
+.practice-type-select .active {
+  background-color: #dbdbdb;
+}
+
 /* SERVICE */
 
 .service-layout {
@@ -266,6 +295,16 @@ footer {
 
   .service-layout img {
     height: 150px !important;
+  }
+
+  .practice-type-select {
+    margin: calc(var(--layout-paddind-vertical-min) * -1)
+      calc(var(--layout-paddind-horizontal-min) * -1) 0px
+      calc(var(--layout-paddind-horizontal-min) * -1);
+  }
+
+  .practice-type-select button{
+    font-size: smaller;
   }
 
   .global-header .checkbox {

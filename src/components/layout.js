@@ -9,9 +9,9 @@ const Layout = ({ pathname, children }) => {
       <header className="global-header">
         <input className="checkbox" type="checkbox" name="" id="" />
         <div className="hamburger-lines">
-          <span class="line line1"></span>
-          <span class="line line2"></span>
-          <span class="line line3"></span>
+          <span className="line line1"></span>
+          <span className="line line2"></span>
+          <span className="line line3"></span>
         </div>
         <h1 className="main-heading">
           <Link to="/">Адвокат Покарев</Link>
@@ -19,19 +19,22 @@ const Layout = ({ pathname, children }) => {
         <nav className="navigation">
           <ul className="menu-items">
             <li>
-              <Link to="/" className={pathname === "/" && "active"}>
+              <Link to="/" className={pathname === "/" ? "active" : ""}>
                 Главная
               </Link>
             </li>
             <li>
-              <Link to="/about" className={pathname === "/about" && "active"}>
+              <Link
+                to="/about"
+                className={pathname === "/about" ? "active" : ""}
+              >
                 Обо мне
               </Link>
             </li>
             <li>
               <Link
                 to="/practice"
-                className={pathname === "/practice" && "active"}
+                className={pathname === "/practice" ? "active" : ""}
               >
                 Практика
               </Link>
@@ -39,20 +42,20 @@ const Layout = ({ pathname, children }) => {
             <li>
               <Link
                 to="/service"
-                className={pathname === "/service" && "active"}
+                className={pathname === "/service" ? "active" : ""}
               >
                 Услуги
               </Link>
             </li>
             {/* <li>
-              <Link to="/" className={pathname === "/feedbacks" && "active"}>
+              <Link to="/" className={pathname === "/feedbacks" ? "active" : ""}>
                 Отзывы
               </Link>
             </li> */}
             <li>
               <Link
                 to="/contacts"
-                className={pathname === "/contacts" && "active"}
+                className={pathname === "/contacts" ? "active" : ""}
               >
                 Контакты
               </Link>
