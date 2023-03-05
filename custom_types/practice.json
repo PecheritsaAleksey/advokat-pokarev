@@ -21,10 +21,21 @@
         "select": null
       }
     },
+    "case_number": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading1, heading2, heading3, heading4, heading5, heading6",
+        "label": "case_number"
+      }
+    },
     "type": {
       "type": "Select",
       "config": {
-        "options": ["arbitration", "civil", "criminal"],
+        "options": [
+          "arbitration",
+          "civil",
+          "criminal"
+        ],
         "default_value": "arbitration",
         "label": "type"
       }

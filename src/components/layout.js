@@ -23,14 +23,14 @@ const Layout = ({ pathname, children }) => {
                 Главная
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link
                 to="/about"
                 className={pathname === "/about" ? "active" : ""}
               >
                 Обо мне
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link
                 to="/practice"

@@ -164,6 +164,10 @@ footer {
   line-height: 35px;
 }
 
+.main-item h3 p {
+  margin-bottom: 10px;
+}
+
 .main-item img {
   max-width: 500px !important;
   object-fit: contain;
@@ -303,7 +307,7 @@ footer {
       calc(var(--layout-paddind-horizontal-min) * -1);
   }
 
-  .practice-type-select button{
+  .practice-type-select button {
     font-size: smaller;
   }
 

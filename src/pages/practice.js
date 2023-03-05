@@ -23,6 +23,9 @@ const PracticePage = ({ location }) => {
             link {
               url
             }
+            case_number {
+              text
+            }
           }
         }
       }
@@ -35,23 +38,39 @@ const PracticePage = ({ location }) => {
     <Layout pathname={location.pathname}>
       <Seo title={"Адвокат Покарев"} />
       <div className="practice-type-select">
-        <button className={selectedType === "arbitration" ? "active" : ""} onClick={() => setSelectedType("arbitration")}>
+        <button
+          className={selectedType === "arbitration" ? "active" : ""}
+          onClick={() => setSelectedType("arbitration")}
+        >
           Арбитражные
         </button>
-        <button className={selectedType === "civil" ? "active" : ""} onClick={() => setSelectedType("civil")}>Гражданские</button>
-        <button className={selectedType === "criminal" ? "active" : ""} onClick={() => setSelectedType("criminal")}>Уголовные</button>
+        <button
+          className={selectedType === "civil" ? "active" : ""}
+          onClick={() => setSelectedType("civil")}
+        >
+          Гражданские
+        </button>
+        <button
+          className={selectedType === "criminal" ? "active" : ""}
+          onClick={() => setSelectedType("criminal")}
+        >
+          Уголовные
+        </button>
       </div>
       <div className="container flex-column">
         {practicesData.map((data) => {
-          const { name, result, link, type } = data.data;
+          const { name, result, link, type, case_number } = data.data;
           if (type === selectedType)
             return (
               <div className="practice-item flex-column">
                 <h2>{name.text}</h2>
                 <h3>{result.text}</h3>
-                <h4>
-                  <a href={link.url}>Просмотреть решение</a>
-                </h4>
+                {link && (
+                  <h4>
+                    <a href={link.url}>Просмотреть решение</a>
+                  </h4>
+                )}
+                {case_number && <h4>{case_number.text}</h4>}
               </div>
             );
           return null;

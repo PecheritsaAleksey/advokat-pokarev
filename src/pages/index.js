@@ -21,6 +21,9 @@ const IndexPage = ({ location }) => {
             description {
               text
             }
+            about {
+              html
+            }
             avatar {
               gatsbyImageData
             }
@@ -30,7 +33,7 @@ const IndexPage = ({ location }) => {
     }
   `);
 
-  const { big_title, small_title, description, avatar } =
+  const { big_title, small_title, description, avatar, about } =
     data.allPrismicMain.nodes[0].data;
 
   const image = getImage(avatar);
@@ -45,6 +48,11 @@ const IndexPage = ({ location }) => {
         <div className="main-item flex-column">
           <h1>{big_title.text}</h1>
           <h3>{small_title.text}</h3>
+          {about && (
+            <div className="main-item flex-column">
+              <h3 dangerouslySetInnerHTML={{ __html: about.html }}></h3>
+            </div>
+          )}
         </div>
         <div className="main-item">
           <p>{description.text}</p>
