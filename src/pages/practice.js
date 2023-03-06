@@ -12,6 +12,7 @@ const PracticePage = ({ location }) => {
     query PracticeQuery {
       allPrismicPractice {
         nodes {
+          id
           data {
             type
             name {
@@ -60,12 +61,13 @@ const PracticePage = ({ location }) => {
       <div className="container flex-column">
         {practicesData.map((data) => {
           const { name, result, link, type, case_number } = data.data;
+          const { id } = data;
           if (type === selectedType)
             return (
-              <div className="practice-item flex-column">
+              <div className="practice-item flex-column" key={id}>
                 <h2>{name.text}</h2>
                 <h3>{result.text}</h3>
-                {link && (
+                {link.url && (
                   <h4>
                     <a href={link.url}>Просмотреть решение</a>
                   </h4>
