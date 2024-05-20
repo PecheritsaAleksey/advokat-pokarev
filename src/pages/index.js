@@ -40,7 +40,18 @@ const IndexPage = ({ location }) => {
 
   return (
     <Layout pathname={location.pathname}>
-      <Seo title={"Адвокат Покарев"} />
+      <Seo
+        title="Адвокат Покарев"
+        description="Адвокат по уголовным, гражданским, экономическим делам и спорам в Красноясрке. Опыт более 20 лет"
+        lang="ru"
+        meta={[
+          {
+            name: "keywords",
+            content:
+              "адвокат, Красноярск, уголовные дела, гражданские дела, экономические споры, юрист, адвокатская коллегия",
+          },
+        ]}
+      />
       <div className="container">
         <div className="main-item">
           <GatsbyImage image={image} alt={"Адвокат Покарев"} />
