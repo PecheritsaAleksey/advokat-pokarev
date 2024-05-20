@@ -52,7 +52,6 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
-        output: `/sitemap.xml`,
         query: `
           {
             allSitePage {
@@ -69,11 +68,9 @@ module.exports = {
         `,
         resolveSiteUrl: ({ site }) => site.siteMetadata.siteUrl,
         resolvePages: ({ allSitePage: { nodes } }) => {
-          return nodes
-            .filter((x) => !x.path.includes("404"))
-            .map((node) => {
-              return { path: node.path };
-            });
+          return nodes.map((node) => {
+            return { path: node.path };
+          });
         },
         serialize: ({ path }) => {
           return {
@@ -88,7 +85,8 @@ module.exports = {
       resolve: "gatsby-plugin-robots-txt",
       options: {
         host: "https://www.xn----7sbabhdjm5bc4bdmry.xn--p1ai",
-        sitemap: "https://www.xn----7sbabhdjm5bc4bdmry.xn--p1ai/sitemap.xml",
+        sitemap:
+          "https://www.xn----7sbabhdjm5bc4bdmry.xn--p1ai/sitemap/sitemap-index.xml",
         policy: [
           {
             userAgent: "*",
