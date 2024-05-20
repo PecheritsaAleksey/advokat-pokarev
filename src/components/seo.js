@@ -50,7 +50,7 @@ const Seo = ({ description, lang, meta, title, children }) => {
           property: `og:type`,
           content: `website`,
         },
-        ...meta,
+        ...(Array.isArray(meta) ? meta : []),
       ]}
     >
       {children}
